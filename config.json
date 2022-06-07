@@ -1,0 +1,17 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/ss-insights",
+    "prod_uri": "mysql://root:@localhost/ss-insights",
+    "link_url_1": "https://www.linkedin.com/in/shikhar-sriv/",
+    "link_url_2": "https://www.linkedin.com/in/talinn-arora-a64012139/",
+    "main_link_url": "https://www.linkedin.com/in/shikhar-sriv/",
+    "gmail_user": "quackyjohnson2012@gmail.com",
+    "gmail_password": "quackeroatsshikhar@20",
+    "no_of_posts": 4,
+    "admin-user": "quacker",
+    "admin-password": "quacky_johnson",
+    "upload_location": "E:\\Website_Flask_New_Shik\\static\\img\\"
+  }
+}

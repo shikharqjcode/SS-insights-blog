@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="respage">
+    <h1>Research Reports</h1>
+
+    {% for respost in resposts %}
+    {% set fname = 'img/' + respost.img_file %}
+
+        <div class="resbox">
+            <div class="respic">
+                <a href="/research/{{ respost.slug }}">
+                    <img src="{{ url_for('static', filename=fname) }}" alt="Blog Picture">
+                </a>
+            </div>
+            <div class="restext">
+                <a href="/research/{{ respost.slug }}">
+                    <h2>{{ respost.title }}</h2>
+                </a>
+                <p>Date Posted: {{ respost.date.strftime('%d %B, %Y')}}</p>
+                <p>{{ respost.subtext }}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
+</div>
+{% endblock %}

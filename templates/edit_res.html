@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="contactbox">
+
+            <div id="form">
+                <a href="{{ url_for('user') }}"><button class="connectform">Dashboard</button></a>
+                <h1 id="conpagehead">Add/Edit your Research Post</h1>
+                <h3 id="conpagesubhead">Fill in the new details below</h3>
+                <form action="/edit-res/{{ serialno }}" method="post">
+                    <div class="connectform">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" value="{{ respost.title }}">
+                    </div>
+                    <div class="connectform">
+                        <label for="subtext">Subtext</label>
+                        <textarea name="subtext" class="quer">{{ respost.subtext }}</textarea>
+                    </div>
+                    <div class="connectform">
+                        <label for="cont">Contributer</label>
+                        <input type="text" name="cont" value="{{ respost.cont }}">
+                    </div>
+                    <div class="connectform">
+                        <label for="slug">Slug</label>
+                        <input type="text" name="slug" value="{{ respost.slug }}">
+                    </div>
+<!--                    <div class="connectform">-->
+<!--                        <label for="img_file">Image File</label>-->
+<!--                        <input type="text" name="img_file" value="{{ respost.img_file }}">-->
+<!--                    </div>-->
+<!--                    <div class="connectform">-->
+<!--                        <label for="pdf_file">PDF File</label>-->
+<!--                        <input type="text" name="pdf_file" value="{{ respost.pdf_file }}">-->
+<!--                    </div>-->
+                    <div class="connectform">
+                        <label for="img_file">Image File</label>
+                        <input type="file" name="img_file" value="{{ respost.img_file }}">
+                    </div>
+                    <div class="connectform">
+                        <label for="pdf_file">PDF File</label>
+                        <input type="file" name="pdf_file" value="{{ respost.pdf_file }}">
+                    </div>
+                    <div class="connectform">
+                        <label for="content">Content</label>
+                        <textarea name="content" class="quer">{{ respost.content }}</textarea>
+                    </div>
+                    <div class="connectform">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% set fname = 'img/' + post.img_file %}
+<div class="blogpostcon">
+        <div class="blogposthead">
+            <div class="bphead">
+                <h1>{{post.title}}</h1>
+                <span>Date Posted: {{post.date.strftime('%d %B, %Y')}}</span>
+            </div>
+            <img src=" {{ url_for('static', filename=fname) }} " alt="Blog's Image" id="blogpostpic">
+            <!-- Blog Below -->
+            <p>
+                {{ post.content }}
+            </p>
+
+        </div>
+
+    </div>
+{% endblock %}

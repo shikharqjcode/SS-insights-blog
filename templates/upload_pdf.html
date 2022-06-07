@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="contactbox">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <h1>Please upload the PDF for Research Post</h1>
+    <a href="{{ url_for('user') }}"><button class="connectform">Dashboard</button></a>
+    <div class="connectform">
+        <form method="post" enctype="multipart/form-data">
+            {{form.hidden_tag()}}
+            {{form.file()}}<br>
+            {{form.submit()}}
+        </form>
+    </div>
+</div>
+{% endblock %}

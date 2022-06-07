@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!--<div class="login">-->
+<!--        <div class="username">-->
+<!--            <label for="username">Username</label>-->
+<!--            <input type="text" placeholder="UserName" required>-->
+<!--        </div>-->
+<!--        <div class="password">-->
+<!--            <label for="password">Password</label>-->
+<!--            <input type="password" placeholder="Password" required>-->
+<!--        </div>-->
+<!--        <div class="logbut">-->
+<!--            <button type="submit">Submit</button>-->
+<!--        </div>-->
+<!--</div>-->
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="login">
+    <h1>Login Form</h1>
+    <form action="#" method="post">
+        <p>Username</p>
+        <p><input type="text" name="nm" placeholder="Username"></p>
+        <p>Password</p>
+        <p><input type="password" name="ps" placeholder="Password"></p>
+        <p id="butlog"><input type="submit" value="Submit"></p>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="repcon">
+
+
+        {% set fname = 'img/' + research.img_file %}
+        {% set pdfname = 'pdf/' + research.pdf_file %}
+
+        <div class="reshead">
+            <h1>Research Report on {{ research.title }}</h1>
+            <!-- Contributers Below -->
+            <div id="cont">
+                <p>Contributer(s): {{ research.cont }}</p>
+                <p>Date Posted: {{ research.date.strftime('%d %B, %Y') }}</p>
+            </div>
+            <!-- Company's Image Below -->
+            <img src="{{ url_for('static', filename=fname) }}" alt="Company's Image" id="comppic">
+            <!-- Company's Description Below -->
+            <p id="comp">{{ research.subtext }}</p>
+            <p id="des">{{ research.content }}</p>
+            <div id="pdf">
+                <embed src="{{ url_for('static', filename=pdfname) }}" height="800vh" width="800vw" type="application/pdf" frameborder="0">
+            </div>
+
+        </div>
+
+    </div>
+
+   {% endblock %}

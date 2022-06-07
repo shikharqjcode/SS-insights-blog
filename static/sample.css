@@ -1,0 +1,689 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* All the Variables */
+:root{
+    --link_col: rgb(37, 91, 206);
+    --link_bg: rgba(197, 197, 194, 0.712);
+    --back_col: rgb(205, 249, 255);
+    --link_hov_col: rgba(7, 160, 221, 0.952);
+}
+
+body{
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: var(--link_col);
+}
+
+a:hover{
+    color: var(--link_hov_col);
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+.left_logo{
+    margin: 5px 20px;
+}
+
+/* Logo and Image */
+.left_logo img{
+    height: 15vh;
+}
+
+/* Navigation Bar Styling */
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: var(--back_col);
+    /* width: 100vw; */
+}
+
+.navbar ul{
+    display: flex;
+}
+
+/* List items styling */
+.navbar ul li{
+    margin: 3px 3px;
+    padding: 3px 3px;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.navbar ul li a{
+    margin: 15px 5px;
+    padding: 10px 15px;
+    color: var(--link_col);
+    text-decoration: none;
+}
+
+.navbar ul li a:visited{
+    text-decoration: none;
+    color: var(--link_col);
+}
+
+.navbar ul li a:hover{
+    background-color: var(--link_bg);
+    border-radius: 50px;
+    color: black;
+}
+
+/* Footer Styling */
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    align-items: center;
+    /* width: 100vw; */
+}
+
+.bottom p{
+    margin: 5px 0px;
+    padding: 0px 10px;
+}
+
+.footnav{
+    display: flex;
+    align-items: center;
+    margin: 3px 2px 10px 2px;
+}
+
+.footnav ul{
+    display: flex;
+}
+
+/* List items styling */
+.footnav ul li{
+    margin: 3px 3px;
+    padding: 3px 3px;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.footnav a{
+    text-decoration: none;
+    color: white;
+}
+
+.footnav a:hover{
+    color: var(--link_hov_col);
+}
+
+/* Home Page Styling */
+
+.homepg{
+    display: flex;
+    flex-direction: column;
+}
+
+.homepgbox{
+    display: flex;
+    background-color: var(--back_col);
+    border-style:solid;
+    border-radius: 25px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 10px 20px 10px;
+}
+
+#introhomepg{
+    margin: 20px 10px 20px 10px;
+    padding: 10px 50px 10px 50px;
+}
+
+.contacthomepg{
+    display: flex;
+    margin: 20px 10px 20px 10px;
+    padding: 10px 50px 10px 50px;
+}
+
+.imgshomepg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gmailpic{
+    height: 30vh;
+    width: 25vw;
+    /* border-style: dashed; */
+    margin: 20px;
+}
+
+#linkedinpic{
+    height: 30vh;
+    width: 14vw;
+    /* border-style: dashed; */
+    margin: 20px;
+}
+
+.contactbox{
+    flex: 1.5;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    margin: 5px 15px;
+}
+
+.connectform{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    margin: 7px;
+}
+
+.connectform input, textarea{
+    padding: 5px;
+    margin: 7px 0px;
+    border: 2px solid black;
+    border-radius: 4px;
+    /* width: 70%; */
+}
+
+.connectform button{
+    /* display: flex; */
+    width: 30%;
+    padding: 5px;
+    margin: 5px 0px;
+    /* justify-content: center; */
+    cursor: pointer;
+    margin: auto;
+}
+
+.connectform span{
+    color: red;
+}
+
+.flashmsg{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: dotted;
+}
+
+/* Blog Page Styling */
+
+.blogcon{
+    margin: 0px 40px;
+}
+
+.blogcon a{
+    text-decoration: none;
+    color: black;
+}
+
+.blogcon a:hover{
+    color: var(--link_hov_col);
+}
+
+.blogcon h1{
+    padding: 25px 60px;
+    margin: 20px 20px;
+}
+
+.blogbox{
+    padding: 10px 40px;
+    margin: 10px 20px 30px 20px;
+    display: flex;
+    grid-column-start: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.blogbox img{
+    margin: 10px 10px;
+    height: 22vh;
+    width: 15vw;
+}
+
+.blogtext{
+    flex: 1;
+    margin: 5px;
+}
+
+.blogtext h2{
+    margin: 0px 10px;
+}
+
+.blogtext p{
+    width: 70%;
+    font-size: .95rem;
+    margin: 5px 10px;
+}
+
+/* Below is the styling for a blog post */
+
+.blogposthead{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bphead{
+    margin: 10px 80px;
+    padding: 20px 10px;
+}
+
+.bphead span{
+    margin: 20px 0px;
+    padding: 20px 0px;
+}
+
+.blogposthead img{
+    width: 40%;
+    height: auto;
+    align-self: center;
+}
+
+.blogposthead p{
+    align-self: center;
+    margin: 10px 80px;
+    padding: 20px 10px;
+}
+
+.bpcom{
+    margin: 10px 80px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bpcom form{
+    display: flex;
+    flex-direction: column;
+    padding: 7px 0px;
+    margin: 7px 0px;
+}
+
+.bpcom label{
+    margin: 5px 0px;
+}
+
+.bpcom input{
+    width: 25vw;
+    height: 4vh;
+}
+
+.bpcom textarea{
+    width: 25vw;
+    overflow: scroll;
+}
+
+.bpcom button{
+    width: 5vw;
+    height: 5vh;
+    margin: 10px 0px;
+}
+
+.bpcom button:hover{
+    cursor:pointer;
+}
+
+/* Research Page styling */
+
+.respage a{
+    text-decoration: none;
+    color: black;
+}
+
+.respage a:hover{
+    color: var(--link_hov_col);
+}
+
+.respage h1{
+    padding: 25px 60px;
+    margin: 20px 20px;
+}
+
+.resbox{
+    padding: 10px 40px;
+    margin: 10px 50px 30px 50px;
+    display: flex;
+    grid-column-start: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.respic img{
+    flex: 1;
+    margin: 10px 10px;
+    height: 22vh;
+    width: 15vw;
+    border: 2px solid black;
+}
+
+.restext{
+    flex: 1;
+    margin: 5px;
+}
+
+.restext h2{
+    margin: 0px 10px;
+}
+
+.restext p{
+    width: 70%;
+    font-size: .95rem;
+    margin: 5px 10px;
+}
+
+/* Below is the styling for a research post of a company */
+
+.repcon{
+    display: flex;
+}
+
+.backbut button{
+    padding: 10px 10px;
+    margin: 5px 10px;
+    position: sticky;
+    top: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.backbut a{
+    color: black;
+}
+
+.backbut button:hover{
+    background-color: lightgrey;
+}
+
+.reshead{
+    padding: 25px 50px;
+    margin: 15px 25px;
+    flex: 1;
+}
+
+.reshead #cont{
+    margin: 10px 0px 20px 0px;
+}
+
+.reshead #comppic{
+    margin: 10px 0px 20px 0px;
+    height: 30vh;
+    width: 25vw;
+    border: 2px solid black;
+}
+
+.reshead #comp{
+    width: 65%;
+    margin: 10px 0px 20px 0px;
+}
+
+.reshead #des{
+    width: 65%;
+    margin: 10px 0px 20px 0px;
+}
+
+.rescom{
+    margin: 10px 10px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rescom form{
+    display: flex;
+    flex-direction: column;
+    padding: 7px 0px;
+    margin: 7px 0px;
+}
+
+.rescom label{
+    margin: 5px 0px;
+}
+
+.rescom input{
+    width: 25vw;
+    height: 4vh;
+}
+
+.rescom textarea{
+    width: 25vw;
+    overflow: scroll;
+}
+
+.rescom button{
+    width: 5vw;
+    height: 5vh;
+    margin: 10px 0px;
+}
+
+.rescom button:hover{
+    cursor:pointer;
+}
+
+#pdf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Below is the styling for Contact Me Page */
+
+.connectpage{
+    display: flex;
+}
+
+    
+#conpagehead{
+    margin: 5px 15px;
+    padding: 15px;   
+}
+    
+#conpagesubhead{
+    margin: 0px 15px;
+    padding: 15px;
+}
+
+.contactbox{
+    flex: 1;
+    padding: 15px;
+    margin: 0px 15px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    margin: 5px 15px;
+}
+    
+.connectform{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    margin: 7px;
+}
+    
+.connectform input{
+    padding: 5px;
+    margin: 7px 0px;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 24vw;
+}
+
+.connectform #quer{
+    margin: 7px 0px;
+    height: 30vh;
+    width: 25vw;
+    border: 2px solid black;
+    text-align: left;
+    overflow: scroll;
+}
+
+.connectform #quer::-ms-input-placeholder{
+    text-align:right;
+}
+
+.connectform .quer{
+    height: 30vh;
+    width: 25vw;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+    
+.connectform button{
+    /* display: flex; */
+    width: 30%;
+    padding: 5px;
+    margin: 5px 0px;
+    /* justify-content: center; */
+    cursor: pointer;
+    margin: auto;       
+}
+
+.connectform span{
+    color: red;
+}
+    
+.aboutme{
+    flex: 1.5;
+    position: relative;
+    padding: 15px;
+    margin: 20px 15px;
+    /* border: 2px solid black; */
+}
+
+.aboutmecontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutmecontent h1{
+    margin: 0px 15px;
+}
+
+.aboutmecontent img{
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    margin: 15px 20px;
+    height: 25vh;
+    width: 15vw;
+}
+
+.aboutmecontent p{
+    /* border: 2px solid black; */
+    padding: 10px;
+    margin: 5px 20px;
+    width: 60%;
+}
+
+.aboutmecontent ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login page */
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login h1{
+    padding: 15px 10px;
+    margin: 10px 10px;
+}
+
+.login p{
+    padding: 5px 5px 5px 5px;
+    margin: 3px 5px 3px 10px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.login input{
+    width: 15vw;
+    height: 4vh;
+}
+
+/* For Dashboard Styling */
+
+.dashdisp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashdisp h1{
+    margin: 5px 5px;
+    padding: 5px 5px;
+}
+
+.table{
+    padding: 10px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+.table-title{
+    padding: 5px 5px;
+    margin: 10px 0px 0px 5px;
+}
+
+.table tr{
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+
+.table th{
+    padding: 5px 15px;
+    margin: 5px 5px;
+}
+
+.table td{
+    padding: 5px 15px;
+    margin: 5px 5px;
+    word-wrap: break-word;
+}
+
+.table td button{
+    padding: 5px 5px;
+    margin: 2px 2px;
+}
+
+.table td button:hover{
+    cursor: pointer;
+}
+
+.logbut:hover{
+    background-color: none;
+}
+

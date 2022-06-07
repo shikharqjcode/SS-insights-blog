@@ -1,0 +1,55 @@
+*{
+    font-size: 0.9rem;
+}
+
+h1{
+    font-size: 1.7rem;
+}
+
+/* Navigation */
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+
+.navbar ul{
+    display: block;
+    justify-content: center;
+}
+
+.navbar ul li a{
+    padding: 0px 7px;
+}
+
+
+/* Home page styling */
+.introhomepg{
+    width: 70%;
+}
+
+.contacthomepg{
+    display: flex;
+    flex-direction: column;
+}
+
+.connectpage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.connectform input, textarea{
+    padding: 3px;
+    margin: 5px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+}
+
+.connectform button{
+    overflow: hidden;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='sample.css') }}" >
+    <link rel=stylesheet type="text/css" media="screen and (max-width: 852px)" href="{{ url_for('static', filename='tablet.css') }}">
+    <link rel=stylesheet type="text/css" media="screen and (max-width: 414px)" href="{{ url_for('static', filename='phone.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='scripting.js') }}"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="left_logo">
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/Picture1.png') }}" alt="Site Logo"></a>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('blog') }}">Blogs</a></li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer class="bottom">
+        <nav class="footnav">
+            <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('blog') }}">Blogs</a></li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+            </ul>
+        </nav>
+        <div>
+            Copyright &copy; Shikhar Srivastava, {{ year }}. All Rights Reserved!
+        </div>
+        <p>TimeStamp: <span id="time"></span></p>
+    </footer>
+</body>
+</html>

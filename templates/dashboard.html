@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="dashdisp">
+        <h1>Welcome Back {{username}}</h1>
+        <h1 class="table-title">Admin Dashboard</h1>
+        <a href="/add-post"><button class="connectform">Add Blog</button></a>
+        <a href="/edit-res/0"><button class="connectform">Add Research Post</button></a>
+        <h4>If Image to be used is new, upload it from below</h4>
+        <a href="/upload_img"><button class="connectform">Upload Image</button></a>
+        <h4>If PDF to be used is new, upload it from below</h4>
+        <a href="/upload_pdf"><button class="connectform">Upload PDF</button></a>
+        <a href="{{ url_for('logout') }}"><button class="connectform">Log Out</button></a>
+
+
+        <!-- For Blog Posts -->
+        <h2 class="table-title">Blog Posts</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                 {% for post in posts %}
+
+                <tr>
+                    <td>{{post.sno}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.date.strftime('%d %B, %Y')}}</td>
+                    <td><a href="/edit-blog/{{ post.sno }}"><button>Edit</button></a></td>
+                    <td><a href="/delete-blog/{{ post.sno }}"><button>Delete</button></a></td>
+                </tr>
+
+                 {% endfor %}
+            </tbody>
+
+        </table>
+
+        <h2 class="table-title">Research Reports</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                 {% for res in resps %}
+
+                <tr>
+                    <td>{{res.serialno}}</td>
+                    <td>{{res.title}}</td>
+                    <td>{{res.date.strftime('%d %B, %Y')}}</td>
+                    <td><a href="/edit-res/{{ res.serialno }}"><button>Edit</button></a></td>
+                    <td><a href="/delete-res/{{ res.serialno }}"><button>Delete</button></a></td>
+                </tr>
+
+                 {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="blogcon">
+        <h1>Welcome to 2 Cents - My Blog Page</h1>
+
+<!--        Below is the display for a particular blog-->
+<!--        Below thing is to be done with the help of for loop from the database-->
+
+
+        {% for blog in blogs %}
+        {% set fname = 'img/' + blog.img_file %}
+            <div class="blogbox">
+                <a href="/blog/{{ blog.slug }}">
+                    <img src="{{ url_for('static', filename=fname) }}" alt="Blog Picture">
+                </a>
+                <div class="blogtext">
+                    <a href="/blog/{{ blog.slug }}">
+                        <h2>{{ blog.title }}</h2>
+                    </a>
+                    <p>Date Posted: {{ blog.date.strftime('%d %B, %Y')}}</p>
+                    <p>{{ blog.subtext }}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    {% endblock %}

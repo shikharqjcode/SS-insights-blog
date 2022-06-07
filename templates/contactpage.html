@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="connectpage">
+        <div class="aboutme">
+            <div class="aboutmecontent">
+                <h1>A Little About me</h1>
+                <img src="{{ url_for('static', filename='img/Picture1.png') }}" alt="Here's me!">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore provident ipsum labore mollitia. Quam odio beatae accusamus obcaecati sunt similique, illo iste libero officiis dolorem ducimus incidunt totam excepturi? Ducimus, animi at repellat reiciendis, tempora numquam mollitia magni cum inventore, aspernatur eum aliquam perferendis tenetur officia praesentium provident nemo ullam!</p>
+                <ul>You can also connect with me on
+                    <li> <a href="#">Linkedin</a></li>
+                    <li> <a href="#">Gmail</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contactbox">
+            <div id="form">
+                <h1 id="conpagehead">Have any queries?</h1>
+                <h3 id="conpagesubhead">Fill out the form below. I'll try my best to help you :)</h3>
+                <form action="#" method="post">
+                    <div class="connectform">
+                        <label for="name">Please enter your name<span>*</span></label>
+                        <input type="text" placeholder="Name" required name="name">
+                    </div>
+                    <div class="connectform">
+                        <label for="email">Please enter your email<span>*</span></label>
+                        <input type="email" placeholder="Email" name="email">
+                    </div>
+                    <div class="connectform">
+                        <label for="phone">Please enter your contact number </label>
+                        <input type="tel" placeholder="+91-8888888888" maxlength="15" name="number">
+                        <small>Format: +91-1234567890</small>
+                    </div>
+                    <div class="connectform">
+                        <label for="query">Please enter your query<span>*</span></label>
+                        <textarea name="query" placeholder="Can be a feedback as well, LOL!" id="quer"></textarea>
+                    </div>
+                    <div class="connectform">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div class="connectform">
+                        <p><span>*</span> Indicates Mandatory</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
